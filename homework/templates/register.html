@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load bootstrap_toolkit %}
+{% load url from future %}
+{% block title %}用户注册{% endblock %}
+
+{% block content %}
+
+	{% if errors %}
+		<div class="alert alert-error ">
+			<button type="button" class="close" data-dismiss="alert">×</button>
+			{% for error in errors %}
+			<h4>错误！</h4>{{ error }}
+			{% endfor %}
+		</div>
+	{% endif %}
+	   <div class="well">
+		<form class="form-horizontal" action="/register/" method="post">
+			{% csrf_token %}
+			{{ form|as_bootstrap:"horizontal" }}
+			<p class="form-actions">
+				<input type="submit" value="注册" class="btn btn-primary">
+				<a href="/login/"><input type="button" value="登录" class="btn btn-success"></a>
+			</p>
+		</form>
+		</div>
+{% endblock %}

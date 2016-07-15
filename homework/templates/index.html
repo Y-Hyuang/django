@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load bootstrap_toolkit %}
+{% load url from future %}
+
+
+	
+{% block title %}重写毕业设计{% endblock %}
+
+{% block content %}
+
+<div class="well">
+<div class="row">
+    <div class="span6"> 
+	<div class="table-responsive">
+		<table class="table">
+			<caption><h2>老师个人简介</h2></caption>
+			<tbody>
+				<tr>
+					<td><h4>老师名字：</h4></td>
+					<td>{}</td>
+				</tr>
+				<tr>
+					<td><h4>老师照片：</h4></td>
+					<td><img src="/static/img/1.jpg" class="img-circle"></img></td>
+				</tr>
+				<tr>
+					<td><h4>老师职称：</h4></td>
+					<td>{}</td>
+				</tr>
+				<tr>
+					<td><h4>老师学历：</h4></td>
+					<td>{}</td>
+				</tr>
+				<tr>
+					<td><h4>研究方向：</h4></td>
+					<td>{}</td>
+				</tr>
+				<tr>
+					<td><h4>在研课题：</h4></td>
+					<td>{}</td>
+				</tr>
+				<tr>
+					<td><h4>QQ：</h4></td>
+					<td>{}</td>
+				</tr>
+				<tr>
+					<td><h4>联系邮箱：</h4></td>
+					<td>{}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</div>
+	<div class="span4">
+		<table class="table table-striped">
+			<caption><h3>关注的新闻与文档</h3></caption>
+			<thead>
+				<th>新闻</th>
+			</thead>
+			<tbody>
+				<td>
+					<ul>
+						<li>标题</li>
+						<li>链接：<a href="#">#</a></li>
+					</ul>
+				</td>
+			</tbody>
+			<thead>
+				<th>文档资料</th>
+			</thead>
+			<tbody>
+				<td>
+					<ul>
+						<li>标题</li>
+						<li>链接：<a href="#">#</a></li>
+					</ul>
+				</td>
+			</tbody>
+		</table>
+	</div>
+</div>
+</div>
+{% endblock %}
